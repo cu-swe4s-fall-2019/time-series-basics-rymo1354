@@ -72,7 +72,8 @@ class TestDataImport(unittest.TestCase):
         for obj in data_lst:
             data_5.append(data_import.roundTimeArray(obj, 5))
 
-        r = data_import.printArray(data_5, files_lst, 'out_5', 'smbg_small.csv')
+        r = data_import.printArray(data_5, files_lst, 'out_5',
+                                   'smbg_small.csv')
         self.assertTrue(os.path.exists('out_5.csv'))
         os.remove('out_5.csv')
 

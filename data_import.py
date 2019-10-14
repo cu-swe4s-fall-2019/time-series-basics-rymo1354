@@ -165,25 +165,26 @@ def roundTimeArray(obj, resolution):
     time_rounded_obj._time = rounded_times
 
     sorted_values = [[] for i in range(len(unique_rounded_times))]
-
-    '''
+    """
     ###
     # linear search
+
+    rounded_values = obj._value
 
     for unique_idx in range(len(unique_rounded_times)):
         value_idx = None
         time_rounded_obj._time = rounded_times
-        time_rounded_obj._value = obj._value
+        time_rounded_obj._value = rounded_values
 
-        while value_idx != -1:
-            if value_idx != None:
+        while value_idx != -1 and len(time_rounded_obj._value) > 0:
+            if value_idx is not None:
                 value = time_rounded_obj._value.pop(value_idx)
                 sorted_values[unique_idx].append(value)
                 time_rounded_obj._time.pop(value_idx)
             value_idx = time_rounded_obj.linear_search_value(
                         unique_rounded_times[unique_idx])
     ###
-    '''
+    """
     ###
     # binary search
 

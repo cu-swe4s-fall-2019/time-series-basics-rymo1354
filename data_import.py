@@ -50,8 +50,6 @@ class ImportData:
                     except ValueError:
                         print('Invalid value ' + row['value'])
 
-        return
-
     def linear_search_value(self, key_time):
         """
         linearly searches self._time based on provided key

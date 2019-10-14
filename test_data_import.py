@@ -51,5 +51,16 @@ class TestDataImport(unittest.TestCase):
         self.assertEqual(obj._value[1], 300)
         os.remove('low_high.csv')
 
+    def test_round_time(self):
+        filename = './smallData/smbg_small.csv'
+        obj = data_import.ImportData(filename)
+        rounded = data_import.roundTimeArray(obj, 5)
+        for (time, value) in rounded:
+            self.assertEqual(value, 254.0)
+            d = datetime.datetime(2018, 3, 16, 8, 45)
+            self.assertEqual(time, d)
+            break
+
+
 if __name__ == '__main__':
     unittest.main()

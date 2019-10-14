@@ -27,9 +27,9 @@ The first argument is the folder used to get the raw data csvs, the second is th
 To use this package, you should have [Python3](https://www.python.org/download/releases/3.6/) in your environment. You should also have numpy installed.
 
 ## Utilized Packages
-pycodestyle
-python-dateutil
-numpy
+* pycodestyle
+* python-dateutil
+* numpy
 
 All other packages come preinstalled with python 3.6.
 

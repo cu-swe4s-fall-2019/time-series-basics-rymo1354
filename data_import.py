@@ -1,3 +1,4 @@
+import sys
 import csv
 import dateutil.parser
 from os import listdir
@@ -49,8 +50,6 @@ class ImportData:
                         self._value.append(val)
                     except ValueError:
                         print('Invalid value ' + row['value'])
-
-        return
 
     def linear_search_value(self, key_time):
         """

@@ -40,7 +40,16 @@ class TestDataImport(unittest.TestCase):
         index = obj.binary_search_value(d)
         self.assertEqual(index, -1)
 
-
+    def test_low_high_handling(self):
+        f = open('low_high.csv', 'w')
+        f.write('time,value\n')
+        f.write('3/16/19 4:16,low\n')
+        f.write('3/16/19 5:23,high')
+        f.close()
+        obj = data_import.ImportData('low_high.csv')
+        self.assertEqual(obj._value[0], 40)
+        self.assertEqual(obj._value[1], 300)
+        os.remove('low_high.csv')
 
 if __name__ == '__main__':
     unittest.main()

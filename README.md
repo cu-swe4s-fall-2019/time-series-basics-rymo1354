@@ -15,21 +15,21 @@ python3 data_import.py smallData smdg smdg.csv
 
 The first argument is the folder used to get the raw data csvs, the second is the name of the final csv, and the third is the csv with data values that are the first column of the final csv (not including the time column.) For this build, time resolutions of 5 and 15 are used to group values based upon time. Grouping occurs as follows:
 
-`activity_small.csv`: summation 
-`bolus_small.csv`: summation 
-`meal_small.csv`: summation 
-`smbg_small.csv`: summation 
-`hr_small.csv`: average 
-`cgm_small.csv`: average 
-`basal_small.csv`: average  
+* `activity_small.csv`: summation 
+* `bolus_small.csv`: summation 
+* `meal_small.csv`: summation 
+* `smbg_small.csv`: summation 
+* `hr_small.csv`: average 
+* `cgm_small.csv`: average 
+* `basal_small.csv`: average  
 
 ## Installation
 To use this package, you should have [Python3](https://www.python.org/download/releases/3.6/) in your environment. You should also have numpy installed.
 
 ## Utilized Packages
-pycodestyle
-python-dateutil
-numpy
+* pycodestyle
+* python-dateutil
+* numpy
 
 All other packages come preinstalled with python 3.6.
 
